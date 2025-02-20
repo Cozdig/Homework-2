@@ -9,22 +9,20 @@ public class Main {
 
     if (clientOS == 0) {
         System.out.println("Установите версию приложения для iOS по ссылке");
-        if (clientDeviceYear < 2015){
-            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        }
     }
-
-
-
-    else if (clientOS == 1){
+    else if (clientOS == 1) {
         System.out.println("Установите версию приложения для Android по ссылке");
-        if (clientDeviceYear < 2015){
-            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+    }
+
+    if (clientDeviceYear < 2015 && clientOS == 0) {
+        System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+    }
+    else if (clientDeviceYear < 2015 && clientOS == 1){
+        System.out.println("Установите облегченную версию приложения для Android по ссылке");
     }
 
 
 
-    }
     if (year < 1584){
         System.out.println(year + " год не является високосным");
     }
